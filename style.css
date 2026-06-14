@@ -1,0 +1,457 @@
+/* ═══════════════════════════════════════════════════════════════
+   styles.css — Serenity Spa · Academia Profesional
+   CORREGIDO PARA MÓVIL
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --ink: #0d0804;
+  --deep: #150d07;
+  --dark: #1c1009;
+  --surface: #251408;
+  --surface2: #2e1a0c;
+  --gold: #c9a87a;
+  --gold-light: #e8c98a;
+  --gold-dim: rgba(201,168,122,0.14);
+  --gold-line: rgba(201,168,122,0.28);
+  --cream: #f0e6d3;
+  --text: #e8d5b8;
+  --text-muted: #a8906e;
+  --success: #34d399;
+  --error: #f87171;
+  --radius-card: 16px;
+  --radius-lg: 24px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--ink);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+/* Scroll reveal - siempre visible en móvil */
+.scroll-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(13, 8, 4, 0.95);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--gold-line);
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo i {
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+
+.logo-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+}
+
+.logo-subtitle {
+  display: block;
+  font-size: 0.45rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.3rem 0;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(10, 5, 2, 0.95) 0%, rgba(20, 10, 4, 0.85) 100%),
+    url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+  padding-top: 70px;
+}
+
+.hero-content {
+  max-width: 780px;
+  padding: 1.5rem;
+}
+
+.hero-lotus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.hero-lotus::before,
+.hero-lotus::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-lotus i {
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.hero-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.8rem;
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.hero-swirl {
+  display: block;
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  background: rgba(13, 8, 4, 0.7);
+  border: 1.5px solid var(--gold-line);
+  border-radius: 50px;
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* Sections - AHORA VISIBLES */
+.section {
+  padding: 4rem 0;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.section-dark {
+  background: var(--dark);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-eyebrow {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.section-title h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+}
+
+.section-title h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0.8rem auto 0;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 1rem auto 0;
+  font-size: 0.85rem;
+}
+
+/* Grids */
+.benefits-grid,
+.concepts-grid,
+.downloads-grid,
+.coming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.benefit-card,
+.concept-card,
+.download-card,
+.coming-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--gold-line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: var(--gold-dim);
+}
+
+.benefit-icon i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.benefit-card h3,
+.concept-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p,
+.concept-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.concept-number {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  opacity: 0.4;
+  margin-bottom: 0.6rem;
+}
+
+.concept-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-line);
+  color: var(--gold);
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+}
+
+/* Formulario - VISIBLE */
+.magic-form-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+}
+
+.magic-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.magic-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  background: var(--deep);
+  border: 1px solid var(--gold-line);
+  border-radius: 50px;
+  padding: 0.8rem 1rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.btn-magic {
+  width: 100%;
+  background: var(--gold);
+  border: none;
+  border-radius: 50px;
+  padding: 0.85rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Footer */
+footer {
+  background: var(--ink);
+  border-top: 1px solid var(--gold-line);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-lotus {
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.footer-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.4rem;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .benefits-grid,
+  .concepts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .magic-form-wrap {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  nav {
+    gap: 0.8rem;
+  }
+  
+  nav a {
+    font-size: 0.65rem;
+  }
+  
+  .hero {
+    background-attachment: scroll;
+  }
+}
