@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área Premium | Serenity Spa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="premium-body">
+
+<!-- ══ LOADING SCREEN ══════════════════════════════════ -->
+<div id="loadingScreen" class="loading-screen">
+  <div class="loading-inner">
+    <i class="fas fa-spa loading-icon"></i>
+    <p>Verificando acceso...</p>
+  </div>
+</div>
+
+<!-- ══ CONTENIDO PREMIUM (oculto hasta auth) ══════════ -->
+<div id="premiumContent" class="hidden">
+
+  <!-- Header premium -->
+  <header id="header" class="premium-header">
+    <div class="header-inner">
+      <div class="logo">
+        <i class="fas fa-spa"></i>
+        <div>
+          <div class="logo-title">SERENITY SPA</div>
+          <span class="logo-subtitle">Área Premium</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <div class="user-badge">
+          <i class="fas fa-crown"></i>
+          <span id="userEmail">miembro</span>
+        </div>
+        <button id="signOutBtn" class="btn-signout">
+          <i class="fas fa-sign-out-alt"></i> Salir
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Bienvenida -->
+    <section class="premium-hero">
+      <div class="container">
+        <div class="hero-lotus"><i class="fas fa-crown"></i></div>
+        <h1>Bienvenido al Área Premium</h1>
+        <p class="hero-tagline">Tu acceso exclusivo al conocimiento profesional del masaje</p>
+        <span class="hero-swirl">∞</span>
+      </div>
+    </section>
+
+    <!-- Guía Masaje Sueco -->
+    <section class="section" id="masaje-sueco">
+      <div class="container">
+        <div class="section-title scroll-reveal">
+          <span class="section-eyebrow">Módulo 1</span>
+          <h2>Masaje Sueco Paso a Paso</h2>
+          <p>Guía completa con todas las técnicas y protocolos profesionales</p>
+        </div>
+
+        <div class="content-grid scroll-reveal">
+
+          <!-- Video tutorial -->
+          <div class="content-card video-card">
+            <div class="content-card-header">
+              <i class="fas fa-play-circle"></i>
+              <h3>Video Tutorial Completo</h3>
+            </div>
+            <div class="video-wrapper">
+              <!-- Reemplaza el src con tu video real de YouTube o Vimeo -->
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Masaje Sueco Tutorial"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="card-note"><i class="fas fa-info-circle"></i> Duración: 45 minutos | Nivel: Principiante a Intermedio</p>
+          </div>
+
+          <!-- Pasos del masaje -->
+          <div class="content-card steps-card">
+            <div class="content-card-header">
+              <i class="fas fa-list-ol"></i>
+              <h3>Protocolo Completo</h3>
+            </div>
+            <ol class="steps-list">
+              <li>
+                <strong>Preparación del espacio</strong>
+                <span>Temperatura 22-24°C, luz tenue, música relajante a 60 BPM</span>
+              </li>
+              <li>
+                <strong>Recepción del cliente</strong>
+                <span>Anamnesis, contraindicaciones, consentimiento informado</span>
+              </li>
+              <li>
+                <strong>Effleurage (deslizamiento)</strong>
+                <span>Movimientos largos y suaves para calentar el tejido. 5-10 min</span>
+              </li>
+              <li>
+                <strong>Petrissage (amasado)</strong>
+                <span>Compresión y liberación del músculo. Trabaja en profundidad gradual</span>
+              </li>
+              <li>
+                <strong>Fricción</strong>
+                <span>Movimientos circulares en zonas de alta tensión y nódulos</span>
+              </li>
+              <li>
+                <strong>Tapotement (percusión)</strong>
+                <span>Técnicas de palmeo, puño suave y corte para activar circulación</span>
+              </li>
+              <li>
+                <strong>Vibración</strong>
+                <span>Movimientos oscilatorios para relajación profunda del sistema nervioso</span>
+              </li>
+              <li>
+                <strong>Cierre y recuperación</strong>
+                <span>Effleurage final, hidratación, tiempo de reposo del cliente</span>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Materiales descargables -->
+    <section class="section section-dark" id="materiales">
+      <div class="container">
+        <div class="section-title scroll-reveal">
+          <span class="section-eyebrow">Recursos</span>
+          <h2>Materiales Descargables</h2>
+          <p>Documentos profesionales para usar en tu práctica diaria</p>
+        </div>
+
+        <div class="downloads-grid scroll-reveal">
+
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="download-info">
+              <h4>Guía Completa de Masaje Sueco</h4>
+              <p>48 páginas · Técnicas, anatomía y protocolos</p>
+            </div>
+            <a href="#" class="btn-download" onclick="simulateDownload(this, 'Guia_Masaje_Sueco.pdf')">
+              <i class="fas fa-download"></i> Descargar
+            </a>
+          </div>
+
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="download-info">
+              <h4>Protocolo de Masaje Deportivo</h4>
+              <p>32 páginas · Pre y post competencia</p>
+            </div>
+            <a href="#" class="btn-download" onclick="simulateDownload(this, 'Protocolo_Deportivo.pdf')">
+              <i class="fas fa-download"></i> Descargar
+            </a>
+          </div>
+
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="download-info">
+              <h4>Checklist de Materiales Profesionales</h4>
+              <p>Lista completa de equipamiento esencial</p>
+            </div>
+            <a href="#" class="btn-download" onclick="simulateDownload(this, 'Checklist_Materiales.pdf')">
+              <i class="fas fa-download"></i> Descargar
+            </a>
+          </div>
+
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-clipboard-list"></i></div>
+            <div class="download-info">
+              <h4>Formulario de Anamnesis</h4>
+              <p>Plantilla profesional para evaluación del cliente</p>
+            </div>
+            <a href="#" class="btn-download" onclick="simulateDownload(this, 'Formulario_Anamnesis.pdf')">
+              <i class="fas fa-download"></i> Descargar
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist de materiales -->
+    <section class="section" id="checklist">
+      <div class="container">
+        <div class="section-title scroll-reveal">
+          <span class="section-eyebrow">Equipamiento</span>
+          <h2>Checklist de Materiales</h2>
+          <p>Todo lo que necesitas para una sesión profesional</p>
+        </div>
+
+        <div class="checklist-grid scroll-reveal">
+
+          <div class="checklist-group">
+            <h4><i class="fas fa-bed"></i> Camilla y Espacio</h4>
+            <ul>
+              <li><label><input type="checkbox" /> Camilla regulable en altura</label></li>
+              <li><label><input type="checkbox" /> Sábanas de algodón (x3 por sesión)</label></li>
+              <li><label><input type="checkbox" /> Cojín facial (donut)</label></li>
+              <li><label><input type="checkbox" /> Cojín para rodillas</label></li>
+              <li><label><input type="checkbox" /> Toallas calentadas</label></li>
+            </ul>
+          </div>
+
+          <div class="checklist-group">
+            <h4><i class="fas fa-flask"></i> Aceites y Productos</h4>
+            <ul>
+              <li><label><input type="checkbox" /> Aceite de almendras dulces (base)</label></li>
+              <li><label><input type="checkbox" /> Aceite esencial de lavanda</label></li>
+              <li><label><input type="checkbox" /> Aceite esencial de eucalipto</label></li>
+              <li><label><input type="checkbox" /> Gel de arnica (para deportivo)</label></li>
+              <li><label><input type="checkbox" /> Crema calefactora</label></li>
+            </ul>
+          </div>
+
+          <div class="checklist-group">
+            <h4><i class="fas fa-tools"></i> Herramientas</h4>
+            <ul>
+              <li><label><input type="checkbox" /> Piedras de basalto (calientes)</label></li>
+              <li><label><input type="checkbox" /> Rodillo de cuarzo</label></li>
+              <li><label><input type="checkbox" /> Ventosas de silicona</label></li>
+              <li><label><input type="checkbox" /> Termómetro para aceites</label></li>
+              <li><label><input type="checkbox" /> Calentador de aceites</label></li>
+            </ul>
+          </div>
+
+          <div class="checklist-group">
+            <h4><i class="fas fa-volume-up"></i> Ambiente</h4>
+            <ul>
+              <li><label><input type="checkbox" /> Difusor de aromas</label></li>
+              <li><label><input type="checkbox" /> Playlist de música relajante</label></li>
+              <li><label><input type="checkbox" /> Velas o luz regulable</label></li>
+              <li><label><input type="checkbox" /> Termostato (22-24°C)</label></li>
+              <li><label><input type="checkbox" /> Agua e infusiones para el cliente</label></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulos próximamente -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-title scroll-reveal">
+          <span class="section-eyebrow">Próximamente</span>
+          <h2>Más módulos en camino</h2>
+          <p>Actualizaciones mensuales con nuevo contenido</p>
+        </div>
+        <div class="coming-grid scroll-reveal">
+          <div class="coming-card"><i class="fas fa-fire"></i><h4>Masaje con Piedras Calientes</h4><span>Disponible en Agosto 2025</span></div>
+          <div class="coming-card"><i class="fas fa-baby"></i><h4>Masaje Prenatal</h4><span>Disponible en Septiembre 2025</span></div>
+          <div class="coming-card"><i class="fas fa-hand-holding-heart"></i><h4>Reflexología Podal</h4><span>Disponible en Octubre 2025</span></div>
+          <div class="coming-card"><i class="fas fa-brain"></i><h4>Masaje Cráneo-Sacral</h4><span>Disponible en Noviembre 2025</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-lotus"><i class="fas fa-spa"></i></div>
+    <p class="footer-brand">SERENITY SPA · Área Premium</p>
+    <p class="footer-tagline">Bienestar que se siente, donde estés.</p>
+    <p class="footer-copy">&copy; 2025 Serenity Spa. Todos los derechos reservados.</p>
+  </footer>
+
+</div><!-- /premiumContent -->
+
+<!-- Supabase CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+
+<script>
+// Simulación descarga (reemplazar con URLs reales de tus PDFs)
+function simulateDownload(el, filename) {
+  el.innerHTML = '<i class="fas fa-check"></i> Descargado';
+  el.classList.add('downloaded');
+  setTimeout(() => {
+    el.innerHTML = '<i class="fas fa-download"></i> Descargar';
+    el.classList.remove('downloaded');
+  }, 2500);
+}
+</script>
+
+</body>
+</html>
